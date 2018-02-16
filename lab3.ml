@@ -221,7 +221,7 @@ data type as a tuple or a record.
 ......................................................................*)
 
 type date =
-| Year of int
+Year of int
 | Month of int 
 | Day of int ;;
 
