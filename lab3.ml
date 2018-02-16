@@ -265,7 +265,8 @@ the invariant is violated, and returns the date if valid.
 
 exception Invalid_Date of string ;;
 
-let valid_date (year, month, day) = 
+let valid_date d=
+  let (year, month, day) = d in 
   let max_days =   
   (match month with
   | 1 | 3 | 5 | 7 | 8 | 10 | 12 -> 31
