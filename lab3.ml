@@ -262,7 +262,7 @@ Exercise 9: Create a valid_date function that raises Invalid_Date if
 the invariant is violated, and returns the date if valid.
 ......................................................................*)
 
-*exception Invalid_Date of string ;;
+exception Invalid_Date of string ;;
 
 let valid_date =
   fun _ -> failwith "valid_date not implemented" ;;    
