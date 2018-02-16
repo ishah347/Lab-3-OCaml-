@@ -292,7 +292,7 @@ Exercise 10: Define a person record type. Use the field names "name",
 
 type person = { name : string; 
               favorite : color;  
-              birthday : date } ;;
+              birthdate : date } ;;
 
 (* Let's now do something with these person values. We'll create a
 data structure that allows us to model simple familial relationships.
