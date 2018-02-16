@@ -220,10 +220,9 @@ should be. Then, consider the implications of representing the overall
 data type as a tuple or a record.
 ......................................................................*)
 
-type date = {
-  year : int; 
-  month : int;  
-  day : int } ;;
+type date = { year : int; 
+              month : int;  
+              day : int } ;;
 
 (* After you've thought it through, look up the Date module in the
 OCaml documentation to see how this was implemented there. If you
@@ -263,9 +262,9 @@ Exercise 9: Create a valid_date function that raises Invalid_Date if
 the invariant is violated, and returns the date if valid.
 ......................................................................*)
 
-exception Invalid_Date of string ;;
+(*exception Invalid_Date of string ;;
 
-let valid_date d=
+let valid_date (d : date) : date =
   let (year, month, day) = d in 
   let max_days =   
   (match month with
@@ -276,7 +275,7 @@ let valid_date d=
   if year <= 0 then raise (Invalid_Date "Error")
   else if month < 1 || month > 12 then raise (Invalid_Date "Error")
   else if day < 1 || day > max_days then raise (Invalid_Date "Error")
-  else (year, month, day) ;;
+  else (year, month, day) ;;*)
 
 (*======================================================================
 Part 3: Algebraic data types
